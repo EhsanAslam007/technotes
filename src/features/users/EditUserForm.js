@@ -36,7 +36,7 @@ const EditUserForm = ({ user }) => {
     }, [username])
     useEffect(() => {
         setValidPassword(PWD_REGEX.test(password))
-    }, [[password]])
+    }, [password])  // ✅ single brackets
 
     useEffect(() => {
         if (isSuccess || isDelSuccess) {
